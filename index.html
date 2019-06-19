@@ -14,6 +14,10 @@
 		li{
 			list-style-type: none;
 		}
+		select{
+			border: none;
+			display: inline-block;
+			}
 		.head-wrap{
 			height: 45px;
 
@@ -47,9 +51,10 @@
 			color: black;
 			font:14.78px;
 		}
-		.head-wrap .head .img{
-			margin-top: 4px;
-			float: right;
+		.select-1 {
+			font-size: 14.78px;
+			color: black;
+
 		}
 		.head-search .head{
 			width: 1200px;
@@ -96,6 +101,9 @@
 			width: 1200px;
 			height: 60px;
 			margin: 0 auto;
+		}
+		.select-2{
+			font-size: 14.78px;
 		}
 		.head-nav li {
 			width: 120px;
@@ -170,51 +178,35 @@
 			height: 195px;
 			margin: 0 auto;
 		}
-
-		.subnav-1{
-			float: left;
-		}
-		.subnav-1 ul li{
-			width: 100px;
-			height: 46px;
-			text-align: center;
-			line-height: 40px;
-			background-color: #e5e5e5;
-			
-			border-top:1px solid #b7b7b7;
-			border-left:1px solid #b7b7b7;
-
-
-			}
-		.subnav-1 ul li a{
-				font-size: 16px;
-				color: #000;
-		}
-		.subnav-2{
-			width: 1099px;
-			float: left;
-
-		}
-		.subnav-2 ul{
-			border-top: 1px solid #b7b7b7;
-			border-right: 1px solid #b7b7b7;	
-		}
-		.subnav-2 ul li{
-			width: 126px;
-			height: 46px;
-			display: inline-block;
-			text-align: center;
-			line-height: 40px;
+		.table{
+			width: 1200px;
+			height: 160px;
+			border:1px solid #b7b7b7;
 			
 		}
-		.subnav-2 ul li a{
-			font-size: 16px;
+		.table  a{
 			color: #5c5a5a;
 		}
-		.subnav-2 ul li a:hover{
-			color: #3aa747;
-		}
 
+		.table th{
+			width: 100px;
+			height: 46px;
+			background-color: #e5e5e5;
+			color: #000;
+			border-bottom:1px solid #b7b7b7;
+		}
+		.table td{
+			padding-left: 40px;
+		}
+		.table a:hover{
+			color: #71bb79;
+		}
+		#tablea td{
+			border-bottom:1px solid #b7b7b7;
+		}
+		#tablec td{
+			border-top:1px solid #b7b7b7;
+		}
 		.main-img{
 			width: 1200px;
 			height: 762px;
@@ -337,8 +329,21 @@
 				
 				<li style="font-weight: 600;"><a href="#">&nbsp 请登录 &nbsp</li>
 				<li style="font-weight: bold;"><a href="#">&nbsp 免费注册&nbsp </a></li>
-				<li style="background:url(images/小三角.png) no-repeat 100% 10% ; ">我的订单</li>
-				<li style="background:url(images/小三角.png) no-repeat 100% 10%;  ">我的买猜</li>
+				<li >
+					<select class="select-1">
+						<option value="dingdan">
+						<p>	我的订单</p>
+						</option>
+					</select>
+				</li>
+				<li>
+					<select class="select-1">
+						<option value="dingdan">
+						<p>	我的买猜</p>
+						</option>
+						
+					</select>
+				</li>
 				<li>帮助中心</li>
 			
 			</ul>
@@ -369,7 +374,13 @@
 	<div class="head-nav">
 		<div class="nav">
 			<ul>
-				<li style="background:url(images/小三角.png) no-repeat 100% 40%;">全部商品分类</li>
+				<li >
+					<select class="select-2">
+						<option value="fenlei" selected="">
+							全部商品分类
+						</option>
+					</select>
+				</li>
 				<li><a href="#" >首页</a></li>
 				<li><a href="#">名酒</a></li>
 				<li><a href="#">茗茶</a></li>
@@ -403,40 +414,36 @@
 				<p id="chanpin">共200件相关商品</p>
 			</div>
 			<div class="subnav">
-				<div class="subnav-1">
-					<ul >
-						<li><a href="#">玉石</a></li>
-						<li><a href="#">其他</a></li>
-						<li style="border-bottom:1px solid #b7b7b7; "><a href="#">地区</a></li>
-					</ul>
-					
-				</div >
+				
 				<div class="subnav-2">
-					<ul>
-					<li><a href="#">白玉</a></li>
-					<li><a href="#" >碧玉</a></li>
-					<li><a href="#">黄玉</a></li>
-					<li><a href="#">和田玉</a></li>
-					<li><a href="#">翡翠</a></li>
-					<li><a href="#">绿松玉</a></li>
-					<li><a href="#">墨玉</a></li>
-					</ul>
-					<ul>
-						<li><a href="#">吊坠</a></li>
-						<li><a href="#">扳指</li>
-						<li><a href="#">北京</a></li>
-					</ul>
-					<ul style="border-bottom:1px solid #b7b7b7;">
-						<li><a href="#">北京</a></li>
-						<li><a href="#">安徽</a></li>
-						<li><a href="#">福建</a></li>
-						<li><a href="#">内蒙古</a></li>
-						<li><a href="#">宁夏</a></li>
-						<li><a href="#">黑龙江</a></li>
-						<li><a href="#">河北</a></li>
-					
-						<li style="text-align: right;"><a href="#">&nbsp&nbsp 更多</a></li>
-					</ul>
+					<table class="table" cellspacing="0" cellpadding="18">
+					<tr style="border-bottom: 1px solid #b7b7b7" id="tablea">
+						<th><a href="#">玉石</a></th>
+						<td><a href="#">白玉</a></td>
+						<td><a href="#">碧玉</a></td>
+						<td><a href="#">黄玉</a></td>
+						<td><a href="#">和田玉</a></td>
+						<td><a href="#">翡翠</a></td>
+						<td><a href="#">绿松玉</a></td>
+						<td><a href="#">墨玉</a></td>
+					</tr>
+					<tr id="tableb">
+						<th><a href="#">其他</a></th>
+						<td><a href="#">吊坠</a></td>
+						<td><a href="#">扳指</a></td>
+						<td><a href="#">手镯</a></td>
+					</tr>
+					<tr style="border-top: 1px solid #b7b7b7" id="tablec">
+						<th><a href="#">地区</a></th>
+						<td><a href="#">北京</a></td>
+						<td><a href="#">安徽</a></td>
+						<td><a href="#">福建</a></td>
+						<td><a href="#">内蒙古</a></td>
+						<td><a href="#">宁夏</a></td>
+						<td><a href="#">黑龙江</a></td>
+						<td><a href="#">河北</a></td>
+					</tr>
+		</table>
 				</div>
 		</div>
 		<div class="main-img">
